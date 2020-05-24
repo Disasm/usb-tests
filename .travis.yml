@@ -1,0 +1,13 @@
+language: rust
+
+rust:
+  - nightly
+  - stable
+
+cache: cargo
+
+install:
+  - rustup target add thumbv7m-none-eabi
+
+script:
+  - ./cargo-build.sh
