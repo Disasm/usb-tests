@@ -11,3 +11,6 @@ stm32f1xx-hal = { version = "0.5.0", features = ["rt", "stm32-usbd", "stm32f103"
 embedded-hal = "0.2.3"
 panic-semihosting = "0.5.3"
 usb-device = "0.2.3"
+
+[target.'cfg(unix)'.dependencies]
+tests-common = { path = "../tests-common" }
