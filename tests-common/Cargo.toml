@@ -5,3 +5,7 @@ authors = ["Vadim Kaushan <admin@disasm.info>"]
 edition = "2018"
 
 [dependencies]
+lazy_static = "1.4.0"
+libusb = "0.3.0"
+serialport = "3.3.0"
+usb-switch-common = { path = "../usb-switch-common" }
