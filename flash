@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+ELF="$1"
+BIN="${ELF}.bin"
+
+arm-none-eabi-objcopy -O binary "$ELF" "$BIN"
+stm32flash /dev/serial/by-id/usb-Fake_company_Serial_port_TEST-if00 -w "$BIN"
