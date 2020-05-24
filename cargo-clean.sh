@@ -8,4 +8,6 @@ set -euxo pipefail
 for pkg in $(ls -d test-*); do
     cd "$REPO/$pkg"
     cargo clean
+    cd fw
+    cargo clean
 done

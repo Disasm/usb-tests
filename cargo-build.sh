@@ -7,6 +7,7 @@ set -euxo pipefail
 
 for pkg in $(ls -d test-*); do
     cd "$REPO/$pkg"
+    cargo build --tests
+    cd fw
     cargo build --release --examples
-    cargo build --tests --target x86_64-unknown-linux-gnu
 done
