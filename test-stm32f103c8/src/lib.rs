@@ -7,3 +7,12 @@ use tests_common::*;
 fn dummy() {
     select_chip(0x410);
 }
+
+#[test]
+fn test_class() {
+    select_chip(0x410);
+    flash_firmware("test_class", &[]);
+    run_and_connect();
+    run_usb_device_tests();
+    shutdown();
+}
