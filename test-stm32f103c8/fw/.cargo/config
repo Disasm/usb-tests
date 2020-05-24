@@ -1,5 +1,5 @@
 [target.thumbv7m-none-eabi]
-runner = "../flash"
+runner = "../../flash"
 rustflags = [
   "-C", "link-arg=-Tlink.x",
 ]
